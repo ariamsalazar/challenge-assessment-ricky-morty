@@ -1,8 +1,11 @@
 # challenge-assessment-ricky-morty
 App that display all characters of the Rick &amp; Morty show
 
-1. Install dependencies
+1. Install dependencies:
+
+```bash
 npm install
+```
 
 ## Getting Started
 
