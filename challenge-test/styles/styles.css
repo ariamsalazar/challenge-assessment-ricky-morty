@@ -1,11 +1,13 @@
 .header {
-  background-color: #fff;
+  background-color: #404040;
   width: 100%;
   position: fixed;
-  padding: 1.5rem 2rem;
+  z-index: 999;
+  color: #ffff;
+  padding: 1rem 2rem;
   align-items: center;
   display: flex;
-  height: 90px;
+  height: 80px;
 }
 
 .title-header {
@@ -13,17 +15,31 @@
   letter-spacing: 1px;
   font-weight: 400;
   text-align: left;
-  color: #333;
+  color: #fff;
   margin-left: 10px;
 }
 
 .container-grid{
-  padding: 2.5rem 10rem;
-  height: calc(100% - 90px);
-  margin-top: 90px;
-  display: flex;
+  padding: 2rem 12rem;
+  height: calc(100% - 80px);
+  margin-top: 80px;
+  display: inline-block;
   justify-content: center;
   width: 100%;
+}
+
+.circle {
+  border-radius: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 3px solid #FFF;
+  border-radius: 100%;
+  box-shadow: 0 0 0 1px #190da4;
+  width: 120px;
+  height: 120px;
+  margin-left: 45%;
+  transform: translateX(-50%);
 }
 
 .item-container{
@@ -46,9 +62,8 @@
   padding: .8rem 0;
   text-align: left;
   margin-top: 1rem;
-  color: #999;
-  font-weight: 600;
-  letter-spacing: .5px;
+  color: #474b8c;
+  font-weight: 500;
 }
 
 .footer {
@@ -69,9 +84,69 @@
   margin-top: 5px;
 }
 
+.title-tab {
+  display: inline-block;
+  font-weight: 200;
+  font-size: 13px;
+  color: #333;
+  text-transform: uppercase;
+  padding: 3px 0;
+  border-bottom: 2px solid #474b8c;
+  margin: 20px 0;
+}
+
+.modal-side {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.modal-side.image{
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal-side.left {
+  padding: 1rem;
+}
+
+.info-details {
+  border-left: 2px solid #474b8c;
+  padding: 0 1rem;
+}
+
+.detail {
+  font-size: 14px;
+  font-weight: 300;
+  color: #333;
+  width: 100%;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.detail:first-child{
+  margin-top: 0;
+}
+
+.detail-title {
+  color: #60639d;
+  font-weight: 600;
+}
+
 /* SMALL SCREEN > MOBILE */
 @media (max-width: 760px){
   .container-grid{
     padding: 2rem;
+  }
+  .modal-container{
+    width: 90% !important;
+  }
+  .info-details {
+    padding: 0 .5rem;
+  }
+  .detail {
+    font-size: 12px;
   }
 }

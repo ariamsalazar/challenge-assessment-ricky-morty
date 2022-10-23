@@ -11,24 +11,24 @@ const Characters: React.FC = () => {
 
 		return (
 			<> 
-        Characters List
         {isLoading ? (
             <Skeleton height={300} width="100%" />
           ) : (
             <div className="container-grid">
-            <Grid
-              container
-              alignContent="center"
-              sx={{ width: '100%'}}
-              spacing={3}
-            >
-              {characters &&
-                characters.map((row: ICharacter) => (
-                  <CharacterRow
-                    key={`character_${row.id}`} row={{ ...row }}
-                  />
-              ))}
-            </Grid>
+              <span className="title-tab">All characters</span>
+              <Grid
+                container
+                alignContent="center"
+                sx={{ width: '100%'}}
+                spacing={3}
+              >
+                {characters &&
+                  characters.map((row: ICharacter) => (
+                    <CharacterRow
+                      key={`character_${row.id}`} row={{ ...row }}
+                    />
+                ))}
+              </Grid>
             </div>
           )}
       </>
